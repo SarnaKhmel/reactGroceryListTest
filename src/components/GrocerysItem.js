@@ -14,15 +14,15 @@ export class GrocerysItem extends Component {
     }
 
     render() {
-        const {id, title} = this.props.grocery;       // Destructuring so you can use shorter variables in the return statement
+        const {id, title} = this.props.grocery;      
         return (
-            // Call getStyle function with () so it's automatically run, whereas with markComplete fxn you only want it to take effect when event happens
+           
             <div style={this.getStyle()}>
                 <p>
-                    <input type="checkbox" onChange={this.props.markComplete.bind(this, id)} />      {/* To access passed down prop (fxn markComplete2) you need prop keyword. Bind keyword allows state to know which item is being marked complete */}
+                    <input type="checkbox" onChange={this.props.markComplete.bind(this, id)} /> 
                     {' '}   
                     {title}
-                    {/* <button onClick={this.props.delTodo2.bind(this, id)} style={btnStyle}> x </button>       Style defined below */}
+                    <button onClick={this.props.delTodo2.bind(this, id)} style={btnStyle}> x </button>    
                 </p>
             </div>
         )
